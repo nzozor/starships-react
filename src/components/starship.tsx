@@ -5,11 +5,12 @@ interface Props {
 const Starship: React.FC<Props> = ({ starship }: Props) => {
   return (
     <div>
-      <h3>Name: {starship.model}</h3>
-      <h3>Number of Films: {starship.films.length}</h3>
-      <p>
+      <h3>Name: {starship.name}</h3>
+      <h4>Model: {starship.model}</h4>
+      <h5>Number of Films: {starship.films.length}</h5>
+      <h6>
         Crew Number: {parseFloat(starship.crew.split("-")[0].replace(",", ""))}
-      </p>
+      </h6>
     </div>
   );
 };
